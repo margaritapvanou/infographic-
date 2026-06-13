@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Κατηγορίες Τεχνικών Προβλημάτων</title>
+  <style>
+    body { font-family: sans-serif; color: #1e293b; padding: 2rem 1rem; }
+    .title { font-size: 26px; text-align: center; margin-bottom: 2.5rem;}
+    .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .card { border: 1px solid #cbd5e1; border-radius: 12px; overflow: hidden; }
+    .card-header { padding: 18px 10px; text-align: center; border-bottom: 1px solid #cbd5e1; font-size: 18px; }
+    .card-body { padding: 14px; }
+    .label { font-size: 13px; color: #475569; margin: 10px 0 4px; }
+    .label:first-child { margin-top: 0; }
+    .badge { font-size: 14px; padding: 8px 12px; border-radius: 6px; margin-bottom: 4px; }
+
+    .net .card-header, .net .badge { background: #f0f7ff; color: #1e40af; }
+    .soft .card-header, .soft .badge { background: #f0fdf4; color: #166534; }
+    .perf .card-header, .perf .badge { background: #fffbeb; color: #9a3412; }
+    .sec .card-header, .sec .badge { background: #fff1f2; color: #9f1239; }
+    .peri .card-header, .peri .badge { background: #f5f3ff; color: #5b21b6; }
+
+    @media (max-width: 1200px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<h1 class="title">5 Κατηγορίες Τεχνικών Προβλημάτων</h1>
+
+<div class="grid">
+
+  <div class="card net">
+    <div class="card-header"><strong>Δίκτυο &amp;<br>Συνδεσιμότητα</strong></div>
+    <div class="card-body">
+      <div class="label">Συμπτώματα</div>
+      <div class="badge">Wi-Fi εικονίδιο με «!»</div>
+      <div class="badge">«No internet access»</div>
+      <div class="badge">Αργή / καμία σύνδεση</div>
+      <div class="label">Πιθανές αιτίες</div>
+      <div class="badge">Router / ISP βλάβη</div>
+      <div class="badge">DNS πρόβλημα</div>
+      <div class="badge">VPN conflict</div>
+      <div class="label">Πρώτο βήμα</div>
+      <div class="badge">Επανεκκίνηση router + έλεγχος Wifi σε άλλη συσκευή</div>
+    </div>
+  </div>
+
+  <div class="card soft">
+    <div class="card-header"><strong>Λογισμικό &amp;<br>Εφαρμογές</strong></div>
+    <div class="card-body">
+      <div class="label">Συμπτώματα</div>
+      <div class="badge">Εφαρμογή δεν ανοίγει</div>
+      <div class="badge">Error code (π.χ. 0x80070005)</div>
+      <div class="badge">Crash / "not responding"</div>
+      <div class="label">Πιθανές αιτίες</div>
+      <div class="badge">Outdated / κατεστραμμένα αρχεία</div>
+      <div class="badge">Δικαιώματα πρόσβασης</div>
+      <div class="badge">Conflict εφαρμογών</div>
+      <div class="label">Πρώτο βήμα</div>
+      <div class="badge">Force quit -> Run as Admin -> Update</div>
+    </div>
+  </div>
+
+  <div class="card perf">
+    <div class="card-header"><strong>Απόδοση<br>Συσκευής</strong></div>
+    <div class="card-body">
+      <div class="label">Συμπτώματα</div>
+      <div class="badge">Αργός υπολογιστής</div>
+      <div class="badge">CPU / RAM 90%+</div>
+      <div class="badge">Εφαρμογές "παγώνουν"</div>
+      <div class="label">Πιθανές αιτίες</div>
+      <div class="badge">Background διεργασίες</div>
+      <div class="badge">Γεμάτος δίσκος</div>
+      <div class="badge">Malware / παλιοί drivers</div>
+      <div class="label">Πρώτο βήμα</div>
+      <div class="badge">Task Manager -> End Task -> Disk Cleanup</div>
+    </div>
+  </div>
+
+  <div class="card sec">
+    <div class="card-header"><strong>Ιοί -<br> Ransomware</strong></div>
+    <div class="card-body">
+      <div class="label">Συμπτώματα</div>
+      <div class="badge">CPU / RAM 90%+</div>
+      <div class="badge">Απώλεια αρχείων</div>
+      <div class="badge">Άνοιγμα εφαρμογών χωρίς άδεια από τον χρήστη</div>
+      <div class="label">Πιθανές αιτίες</div>
+      <div class="badge">Επίσκεψη σε ύποπτο site</div>
+      <div class="badge">Κατέβασμα αρχείων από μη έμπιστες πηγές</div>
+      <div class="label">Πρώτο βήμα</div>
+      <div class="badge">Εκτέλεση ελέγχου του υπολογιστή με ένα πρόγραμμα Antivirus</div>
+    </div>
+  </div>
+
+  <div class="card peri">
+    <div class="card-header"><strong>Περιφερειακά<br>&amp; Drivers</strong></div>
+    <div class="card-body">
+      <div class="label">Συμπτώματα</div>
+      <div class="badge">Εκτυπωτής / μικρόφωνο / κάμερα offline</div>
+      <div class="badge">Device Manager: κίτρινο «!»</div>
+      <div class="label">Πιθανές αιτίες</div>
+      <div class="badge">Πολύ παλιός / κατεστραμμένος driver</div>
+      <div class="badge">Λάθος ρυθμίσεις Ιδιωτικότητας</div>
+      <div class="badge">USB / Bluetooth αποσυνδέσεις</div>
+      <div class="label">Πρώτο βήμα</div>
+      <div class="badge">Αποσύνδεση / επανασύνδεση -> Αναβάθμιση driver</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
